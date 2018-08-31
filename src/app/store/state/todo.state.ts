@@ -1,6 +1,6 @@
-import {State, Action, StateContext, Selector} from '@ngxs/store';
-import {Todo} from '../models';
-import {AddTodo, PopulateTodos, ToggleTodo, ClearCompleted, CompletedAll, DeleteTodo, UpdateTodo, SetFilter} from '../actions';
+import { State, Action, StateContext, Selector } from '@ngxs/store';
+import { Todo } from '../models';
+import { AddTodo, PopulateTodos, ToggleTodo, ClearCompleted, CompletedAll, DeleteTodo, UpdateTodo, SetFilter } from '../actions';
 
 
 export class TodoStateModel {
@@ -17,7 +17,7 @@ export class TodoStateModel {
 })
 
 export class TodoState {
-
+  
   @Selector()
   static getTodos(state: TodoStateModel) {
     return state.todos;
@@ -27,15 +27,6 @@ export class TodoState {
   static getFilter(state: TodoStateModel) {
     return state.filter;
   }
-
- /* @Selector()
-  static getTest(args: string) {
-    return function (state: any) {
-      return state.todos.map(td => {
-        return td.text === args;
-      });
-    };
-  }*/
 
   @Selector()
   static getVisibleTodos(state: TodoStateModel) {

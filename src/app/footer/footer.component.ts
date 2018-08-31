@@ -1,8 +1,8 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Select, Store} from '@ngxs/store';
-import {ClearCompleted, CompletedAll} from './../store/actions';
-import {TodoState} from '../store/state';
-import {Subscription} from 'rxjs/Subscription';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Select, Store } from '@ngxs/store';
+import { ClearCompleted, CompletedAll } from './../store/actions';
+import { TodoState } from '../store/state';
+import { Subscription } from 'rxjs';
 
 
 @Component({
